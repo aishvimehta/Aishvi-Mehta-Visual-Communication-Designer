@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aishvi Mehta - I design your stories </title>
+  <link rel="icon" type="image/png" href="images/amlogo.png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Amarante' rel='stylesheet'>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<link href='https://fonts.googleapis.com/css?family=Battambang' rel='stylesheet'>
+<style>
+
+.btn {
+  background-color: #6E64DC; 
+  color: #fff; 
+  transition: background-color 0.3s ease; 
+  font-family: Battambang;
+}
+
+.btn:hover {
+  background-color: #3b357f; 
+}
+
+
+    .navbar {
+      background-color: #000000; /* Black background */
+      font-family: Helvetica, sans-serif;
+      font-weight: bold;
+    }
+    .navbar-brand {
+      margin-right: 2rem; /* Spacing after brand */
+    }
+    .nav-link {
+      margin: 0 1rem; /* Spacing between links */
+    }
+    .rounded-button {
+      background-color: #6E64DC;
+      border: none;
+      border-radius: 20px;
+      color: white;
+      padding: 8px 16px;
+      font-weight: bold;
+    }
+    .main-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .main-text {
+  color: #6E64DC; 
+  font-family: 'Amarante', cursive; 
+  font-size: 3.8rem; /* Larger size for the text */
+  max-width: 100%; /* Adjust width to allow more space */
+}
+
+.resume-button {
+  margin-top: 1rem;
+  font-family: Helvetica, sans-serif; /* Helvetica font for the button */
+  font-weight: bold; /* Bold text for the button */
+  padding: 10px 32px; /* Adjust padding for the button */
+  border-radius: 50px; /* Make button more rounded */
+  background-color: #6E64DC; /* Lavender button */
+  color: white;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none; /* Remove underline from button */
+  transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: #5b52bf; /* Slightly darker lavender when hovered */
+}
+
+.main-image img {
+    width: auto;
+    height: 100vh;
+    object-fit: cover;
+
+}
+
+.headings
+{
+    color: #6E64DC;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: Battambang;
+    padding-top: 40px;
+}
+
+.typewriter {
+  background-color:black;
+  text-align: center;
+  padding-top: 3.5em;
+  padding-left: 2em;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-decoration: none;
+}
+
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.card-text {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.card {
+    margin: 0 1px;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+    background-color: #1d1d1d;
+    text-align: left;
+    color: white;
+    border-radius: 19px;
+    width: 350px;
+    height: 450px;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    margin: 0 auto;
+    height: 100vh;
+    align-items: center;
+}
+
+.slide-track {
+    display: flex;
+    animation: scroll 25s linear infinite;
+    width: 100%;
+    justify-content: center;
+}
+
+.slide {
+    flex: 0 0 auto;
+    width: auto; /* Adjust width of each slide to fit 3 slides per view */
+    margin: 0 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: black;
+    border-radius: 8px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-350px * 6));
+    }
+}
+
+@media (min-width: 768px) {
+    .card img {
+        height: 11em;
+    }
+}
+
+
+.grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 10px;
+      height: 100vh;
+    }
+
+    .grid-item {
+      position: relative;
+      overflow: hidden;
+
+    }
+
+    .grid-item img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+    }
+
+    .grid-item .first {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: z-index 0.5s ease, transform 0.6s ease;
+    }
+
+    .grid-item:hover .first {
+      z-index: 0;
+      transform: scale(1.05);
+    }
+
+    .grid-container0 {
+  display: grid;
+  grid-template-columns: 1.5fr 3fr; /* First column is twice as wide */
+  grid-template-rows: repeat(2, 1fr); 
+  grid-gap: 30px;
+  width: 100%;
+  height: 100%; /* Full height layout */
+  padding: 10px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+.grid-item0 {
+  position: relative;
+  overflow: hidden;
+  background-color: #f0f0f0; /* Placeholder background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grid-item0 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.grid-item0 .first0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: z-index 0.5s ease, transform 0.6s ease;
+}
+.grid-item0:hover .first0 {
+  z-index: 0;
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out;
+}
+.item1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.item2 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 2;
+}
+.item3 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 3fr 1.5fr; /* First column is twice as wide */
+  grid-template-rows: repeat(2, 1fr); 
+  grid-gap: 30px;
+  width: 100%;
+  height: 100%; /* Full height layout */
+  padding: 10px;
+  padding-top: 22px;
+}
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  background-color: #f0f0f0; /* Placeholder background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.grid-item .first {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: z-index 0.5s ease, transform 0.6s ease;
+}
+.grid-item:hover .first {
+  z-index: 0;
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out;
+}
+.item4 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+.item5 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.item6 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+
+@keyframes scrollRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.marquee {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #6E64DC;
+    padding: 10px;
+    opacity: 0.6;
+}
+
+.text1 {
+    font-size: 20px;
+    white-space: nowrap;
+    display: inline-block;
+    animation: scrollRight 80s linear infinite;  /* Right to left animation */
+}
+
+.text2 {
+    font-size: 20px;
+    white-space: nowrap;
+    display: inline-block;
+    animation: scrollLeft 80s linear infinite;  /* Left to right animation */
+}
+
+
+.text-overlay {
+  position: absolute;
+  bottom: 10px; /* Position 10px from the bottom */
+  left: 10px; /* Position 10px from the left */
+  color: white; /* Text color */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  padding: 5px 10px; /* Padding around text */
+  font-size: 14px; /* Adjust font size */
+  border-radius: 5px; /* Optional rounded corners */
+  text-align: center; /* Align text */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth fade-in effect */
+}
+
+.grid-item0:hover .text-overlay {
+  opacity: 1; /* Make text visible on hover */
+}
+.grid-item:hover .text-overlay {
+  opacity: 1; /* Make text visible on hover */
+}
+
+body {
+    font-family: 'Battambang';
+}
+
+#services .headings {
+    margin-bottom: 0px;
+}
+  </style>
+</head>
+
+<body style="background-color: #000000; color: white;">
+  <!-- Sticky Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top" style="font-family: Battambang;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#" style="padding-left: 15px;">
+            <img src="images/logo.png" alt="Aishvi Mehta" style="height: 80px;">
+          </a>          
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#story">Story</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#work">Work</a>
+          </li>
+        </ul>
+        <a href="#contact" class="btn rounded-button">Let's Connect!</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="main-content">
+    <div style="padding-left: 80px;">
+      <h1 class="main-text">Every great</h1>
+      <h1 class="main-text">design begins with</h1>
+      <h1 class="main-text">an even better story!</h1>
+      <h5 style="font-family: Amarante; padding-top: 20px; padding-bottom: 10px;">and here's mine!</h5>
+        <a href="images/resume.png" class="btn rounded-button resume-button" style="font-family: Battambang;" target="_blank">Resume</a>
+
+      
+    </div>
+    <div class="main-image">
+      <img src="images/me.png" alt="me">
+    </div>
+  </div>
+
+  <section>
+    <marquee width="100%" direction="right" style="background-color: #6E64DC; padding: 10px; transform: rotate(5deg); opacity: 0.6;">
+        <div class="text1" style="font-size: 20px;">publications . packaging . illustration . graphics . video editing . print media . giftings . branding . publications . packaging . illustration . graphics . video editing . print media . giftings . branding . publications . packaging . illustration . graphics . video editing . print media . giftings . branding . publications . packaging . illustration . graphics . video editing . print media . giftings . branding .</div>
+    </marquee>
+    <marquee width="100%" direction="left" style="background-color: #6E64DC; padding: 10px; transform: rotate(-5deg)">
+        <div class="text2" style="font-size: 20px;">publications . packaging . illustration . graphics . video editing . print media . giftings . branding . publications . packaging . illustration . graphics . video editing . print media . giftings . branding . publications . packaging . illustration . graphics . video editing . print media . giftings . branding . publications . packaging . illustration . graphics . video editing . print media . giftings . branding .</div>
+    </marquee>
+</section>
+
+  <div id="story" class="container mt-5" style="min-height: 100vh; text-align: center;">
+    <h1 class="headings">STORY</h1>
+    <div class="container-fluid" style="padding-top: 50px;">
+        <div class="row">
+          <div class="col-md-5 text-start">
+            <h1 class="h2" style="font-family: Amarante; padding-bottom: 20px;">Hi, I'm Aishvi Mehta</h1>
+            <h5 style="font-family: Battambang; font-size: medium">Mumbai-based designer with a passion for visual communication and graphics.</p>
+                <p>Design is all about simplifying complex ideas and transforming them into impactful, creative solutions. I find inspiration in experiences around me, translating them into tangible expressions that resonate with people.</p>
+               <p style="padding-bottom: 20px;"> My work is rooted in a strong aesthetic sense, an eye for detail, and a drive for perfection. Whether I'm crafting a brand identity, illustrating a story, or innovating a product, I approach every project with a deep appreciation for how design connects us to our surroundings and ourselves.</p>
+            </h5>
+            <a href="#contact" class="btn rounded-button">Let's Connect!</a>
+          </div>
+
+          <div class="col-md-6">
+            <h1 class="typewriter"> 
+                <span style="color:#6E64DC; font-weight: bolder; font-size: 45px;">I Love  </span> <!-- This is the constant text -->
+               <a style="text-decoration: none;" href="" class="typewrite" data-period="2000" data-type='[" Designing.", " Storytelling.", " Ideation.", " Research.", " Engagement.", " Aesthetics."]'>
+                <span class="wrap"></span>
+                </a>
+            </h1>
+            </div>
+        </div>
+
+
+  <div id="services" class="container mt-5" style="min-height: 100vh; text-align: center;">
+    <h1 style="font-family: 'Amarante', cursive; font-size: 55px;">Let's connect and create something</h1>
+    <h1 style="font-family: 'Amarante', cursive; font-size: 55px;">extraoridinary together</h1>
+    <h1 class="headings" style="padding-top: 30px;">SERVICES</h1>
+    
+
+    <div id="carouselExampleAutoplay" class="carousel slide" data-ride="carousel" data-interval="6000" data-pause="false">
+        <div class="slider">
+            <div class="slide-track">
+                <div class="slide">
+                    <div class="card">
+                        <img src="images/image1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>Branding and Identity Design</b></h4>
+                            <p class="card-text">Crafting unique brand identities that resonate with your audience, ensuring your brand stands out in a competitive market with memorable visuals and messaging.</p>
+                            <a href="#contact" class="btn rounded-button">Let's Connect!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="card">
+                        <img src="images/image2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>Product Packaging Design</b></h4>
+                            <p class="card-text">Designing innovative and visually captivating packaging that enhances product appeal and provides a delightful unboxing experience for your customers. Focusing on combining aesthetics and functionality to make your product shine on the shelves.</p>
+                            <a href="#contact" class="btn rounded-button">Let's Connect!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="card">
+                        <img src="images/image3.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>Print and Publication Design</b></h4>
+                            <p class="card-text">Creating impactful layouts and designs for books, magazines, and digital publications that effectively communicate your content while maintaining aesthetic appeal.</p>
+                            <a href="#contact" class="btn rounded-button">Let's Connect!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="card">
+                        <img src="images/image4.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>Video Editing and Post-Production</b></h4>
+                            <p class="card-text">Transforming raw footage into engaging, polished videos with seamless editing, dynamic transitions, and professional-grade enhancements to tell your story.</p>
+                            <a href="#contact" class="btn rounded-button">Let's Connect!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="card">
+                        <img src="images/image5.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>Illustrations and Graphics</b></h4>
+                            <p class="card-text">Illustration and graphic design services that bring creativity together. From concept to execution, these visuals are crafted to captivate and communicate effectively. Transforming ideas into striking visuals.
+                            </p>
+                            <a href="#contact" class="btn rounded-button">Let's Connect!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="card">
+                        <img src="images/image6.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>Unique Gifting Solutions</b></h4>
+                            <p class="card-text">Explore unique gifting solutions with custom-designed photocards and editorial print-based gifts. Thoughtfully crafted to celebrate and gift your loved ones. From packaging, we craft solutions that elevate your gifting game.</p>
+                            <a href="#contact" class="btn rounded-button">Let's Connect!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="card">
+                        <img src="images/image1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>Branding and Identity Design</b></h4>
+                            <p class="card-text">Crafting unique brand identities that resonate with your audience, ensuring your brand stands out in a competitive market with memorable visuals and messaging.</p>
+                            <a href="#contact" class="btn rounded-button">Let's Connect!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="card">
+                        <img src="images/image2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>Product Packaging Design</b></h4>
+                            <p class="card-text">Designing innovative and visually captivating packaging that enhances product appeal and provides a delightful unboxing experience for your customers. Focusing on aesthetics and functionality to make your product shine.</p>
+                            <a href="#contact" class="btn rounded-button">Let's Connect!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="card">
+                        <img src="images/image3.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>Print and Publication Design</b></h4>
+                            <p class="card-text">Creating impactful layouts and designs for books, magazines, and digital publications that effectively communicate your content while maintaining aesthetic appeal.</p>
+                            <a href="#contact" class="btn rounded-button">Let's Connect!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="card">
+                        <img src="images/image4.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>Video Editing and Post-Production</b></h4>
+                            <p class="card-text">Transforming raw footage into engaging, polished videos with seamless editing, dynamic transitions, and professional-grade enhancements to tell your story, with precision to bring narrative to life.</p>
+                            <a href="#contact" class="btn rounded-button">Let's Connect!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+</div>
+</div>
+
+<section style="padding-top: 5px;">
+    <marquee width="100%" direction="right" style="background-color: #6E64DC; padding: 10px; transform: rotate(-5deg); opacity: 0.6;">
+        <div class="text1" style="font-size: 20px;">publications . packaging . illustration . graphics . video editing . print media . giftings . branding . publications . packaging . illustration . graphics . video editing . print media . giftings . branding . publications . packaging . illustration . graphics . video editing . print media . giftings . branding . publications . packaging . illustration . graphics . video editing . print media . giftings . branding .</div>
+    </marquee>
+    <marquee width="100%" direction="left" style="background-color: #6E64DC; padding: 10px; transform: rotate(5deg)">
+        <div class="text2" style="font-size: 20px;">publications . packaging . illustration . graphics . video editing . print media . giftings . branding . publications . packaging . illustration . graphics . video editing . print media . giftings . branding . publications . packaging . illustration . graphics . video editing . print media . giftings . branding . publications . packaging . illustration . graphics . video editing . print media . giftings . branding .</div>
+    </marquee>
+</section>
+
+  <div id="work" class="container mt-5" style="min-height: 100vh; text-align: left;">
+    <h1 class="headings"style="padding-bottom: 10px">WORK</h1>
+    <div class="col-9" style="font-size: 20px;">
+    <h2 style="font-family: 'Amarante', cursive; padding-bottom: 15px;">Transforming ideas into designs that tell a unique story !</h2>
+    <p style="padding-bottom: 15px">Welcome to my collection of work—a space where creativity meets purpose. Each project is a reflection of my passion for design, blending innovation with storytelling to craft visuals that resonate. From branding to illustrations, every piece showcases a journey of transforming ideas into meaningful, impactful creations. Dive in and explore the stories behind the designs.</p>
+</div>
+    <div class="grid-container0">
+      <div class="grid-item0 item1">
+        <a href="jojo.pdf" target="_blank"> 
+        <img src="images/Artboard 2 (2).png" />
+        <img class="first0" src="images/Artboard 2.png" />
+    </a>
+      </div>
+      <div class="grid-item0 item2">
+        <a href="magilio.pdf" target="_blank"> 
+        <img src="images/Artboard 1 new.png" />
+        <img class="first0" src="images/Artboard 3.png"  />
+    </a>  
+    </div>
+      <div class="grid-item0 item3">
+        <a href="air.pdf" target="_blank"> 
+        <img src="images/Artboard 2 new.png" />
+        <img class="first0" src="images/Artboard 4.png" />
+    </a>  
+    </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-item item4">
+            <a href="baroque.pdf" target="_blank"> 
+          <img src="images/Artboard 5 (1).png" />
+          <img class="first" src="images/Artboard 5.png" />
+       </a>
+        </div>
+        <div class="grid-item item5">
+            <a href="pottery.pdf" target="_blank"> 
+          <img src="images/new.png" />
+          <img class="first" src="images/Artboard 7.png"  />
+       </a>
+        </div>
+        <div class="grid-item item6">
+            <a href="36.pdf" target="_blank"> 
+            <img src="images/Artboard 4 new.png"  />
+            <img class="first" src="images/Artboard 6.png" />
+        </a>  
+        </div>
+      </div>
+
+
+
+  <div id="contact" class="container mt-5" style="min-height: 100vh; text-align: center;">
+    <h1 style="font-family: 'Amarante', cursive; font-size: 55px; padding-top: 30px;">Ready to turn your story into something </h1>
+    <h1 style="font-family: 'Amarante', cursive; font-size: 55px; padding-bottom: 30px;">that stands out?</h1>
+    <a href="#contact" class="btn rounded-button" style="margin-bottom: 30px;">Let's Connect!</a>
+
+    <footer style="background-color: #000; color: #fff; padding: 20px 0; font-family: 'Arial', sans-serif; text-align: center;">
+        <div style="border-top: 1px solid #666; border-bottom: 1px solid #666; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto;">
+            <div style="flex: 1; text-align: center;">
+                <a href="#top" style="display: inline-block;">
+                  <img src="images/logo.png" alt="Aishvi Mehta Logo" style="width: 170px; height: auto;">
+                </a>
+              </div>              
+          
+          <!-- Email Section -->
+          <div style="flex: 1; text-align: center;">
+            <h4 style="margin: 0; font-weight: normal; color: #4C4C4C; font-family: Battambang; font-size: 20px; padding-bottom: 20px;">drop a mail?</h4>
+            <p style="margin: 0;">
+              <a href="mailto:aishvi005@gmail.com" style="color: #fff; text-decoration: none; font-family: Battambang; font-size: 20px;">aishvi005@gmail.com</a>
+            </p>
+          </div>
+      
+          <!-- Social Icons Section -->
+          <div style="flex: 1; text-align: center;">
+            <h4 style="margin: 0; font-weight: normal; color: #4C4C4C; font-family: Battambang; font-size: 20px; padding-top: 20px;">stay in touch?</h4>
+            <div style="margin-top: 10px;">
+              <div style="flex: 1; text-align: center;">
+                <a href="https://www.linkedin.com/in/aishvi-mehta-b01a05303/" target="_blank" style="color: #ffffff; font-size: 40px; text-decoration: none;">
+                    <i class="fa-brands fa-linkedin" style="color: #ffffff;" aria-hidden="true" ></i> </a>
+                <a href="https://www.instagram.com/designsbyaishvi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" style="color: #ffffff; font-size: 40px; text-decoration: none;">
+                    <i class="fa-brands fa-instagram" aria-hidden="true" style="color: #ffffff;"></i> </a>
+                <a href="https://www.behance.net/designsbyaishvi" target="_blank" style="color: #ffffff; font-size: 40px; text-decoration: none;">
+                    <i class="fa-brands fa-behance" style="color: #ffffff;" aria-hidden="true"></i> </a>
+              </div>             
+            </div>
+          </div>
+        </div>
+        
+        <div style="padding: 10px 0; text-align: center;">
+          <p style="margin: 0;">Created with <i class="fa-regular fa-heart" style="color: #ffffff;" aria-hidden="true"></i> by Aishvi Mehta</p>
+        </div>
+      </footer> 
+      <img src="images/donthesitate.png" alt="Dont hesitate" style="width: 100%; height: auto;">
+</div>
+</div>
+
+<script src="javascr.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
